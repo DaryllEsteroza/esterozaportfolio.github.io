@@ -1,0 +1,39 @@
+@font-face {
+    font-family: gundam;
+    src:url(font/Serpentine/Serpentine.otf);
+}
+@font-face {
+  font-family: proxregular;
+  src:url(../font/Demo_Fonts/Fontspring-DEMO-proximanova-regular.otf);
+}@font-face {
+  font-family: proxmedium;
+  src:url(../font/Demo_Fonts/Fontspring-DEMO-proximanova-medium.otf);
+}@font-face {
+  font-family: proxlight;
+  src:url(../font/Demo_Fonts/Fontspring-DEMO-proximanova-light.otf);
+}@font-face {
+  font-family: proxsemi;
+  src:url(../font/Demo_Fonts/Fontspring-DEMO-proximanova-semibold.otf);
+}@font-face {
+  font-family: proxbold;
+  src:url(../font/Demo_Fonts/Fontspring-DEMO-proximanova-bold.otf);
+}@font-face {
+  font-family: proxblack;
+  src:url(../font/Demo_Fonts/Fontspring-DEMO-proximanova-black.otf);
+}
+
+.de{
+    font-family: proxbold;
+}
+.tit{
+    font-family: proxmedium;
+}
+form label{
+    font-family: proxmedium;
+}
+form span{
+  font-family: proxmedium;
+}
+form button{
+  font-family: proxmedium;
+}

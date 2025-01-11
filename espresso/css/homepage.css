@@ -1,0 +1,255 @@
+@font-face {
+    font-family: Amita;
+    src:url(../fonts/Amita/Amita-Regular.ttf);
+}
+@font-face {
+    font-family: AmitaBold;
+    src:url(../fonts/Amita/Amita-Bold.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src:url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: latoBold;
+  src:url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: latoBlack;
+  src:url(../fonts/Lato-Black.ttf);
+}
+@font-face {
+  font-family: chalk;
+  src:url(../fonts/cf-blackboard-font/CfBlackboardPersonalRegular-AKPg.ttf);
+}
+html{
+    scroll-behavior: smooth;
+}
+.hidden{
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateY(200px);
+	transition: all 0.7s;
+}
+.show{
+	opacity: 1;
+	filter: blur(0);
+	transform: translateY(0);
+}
+.car{
+    margin-top: 20px;
+    background-color: rgb(38 38 37);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.car .carousel-inner img{
+    width: 100%;
+}
+.banner1 h1{
+    font-family: latoBold;
+    font-size: 55px;
+    color: #ffffff;
+}
+.banner1{
+    
+}
+.banner1 h2{
+    font-family: AmitaBold;
+    font-size: 35px;
+    color: #ffffff;
+}
+.banner1 .discover{
+    font-family: latobold;
+    font-size: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    border-color: #ffffff;
+    background-color: rgb(38 38 37);
+    color: #ffffff;
+    transition: 0.5s;
+}
+.banner1 .discover:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #65451F;
+}
+.con2{
+    margin-top: 30px;
+}
+.con2 .overlay-text{
+    color: white;
+    background: #55473A;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.con2 .overlay-text h1{
+    font-family: latobold;
+    font-size: 30px;
+}
+.con2 .overlay-text h2{
+    font-family: lato;
+    font-size: 21px;
+}
+.con2 .overlay-text a{
+    background: none;
+    font-family: latobold;
+    font-size: 24px;
+    color: #ffffff;
+    border: solid 3px #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.con2 .overlay-text a:hover{
+    color: #55473A;
+    background: #ffffff;
+}
+.con2 .col-md-6{
+height: 500px;
+}
+.con3 .row{
+    background: #009C37;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.con3 .row h1{
+    font-family: latobold;
+    color: #ffffff;
+}
+.con3 .row h2{
+    font-family: lato;
+    color: #ffffff;
+    font-size: 22px;
+}
+.con3 button{
+    background: none;
+    font-family: latobold;
+    font-size: 24px;
+    color: #ffffff;
+    border: solid 3px #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+.con3 button:hover{
+    background: #ffffff;
+    color: #009C37;
+}
+.con4{
+    margin-top: 30px;
+}
+.con4 .row{
+   background: #434C4B;
+   padding-top: 13px;
+   padding-bottom: 13px;
+}
+.con4 h1{
+    margin-top: 30px;
+    font-family: amitabold;
+    font-size: 45px;
+}
+.con4 h2{
+    margin-top: 10px;
+    font-family: lato;
+    font-size: 25px;
+}
+.con4 p{
+    margin-top: 80px;
+    font-family: latobold;
+    font-size: 23px;
+}
+.con4 button{
+    background: none;
+    font-family: latobold;
+    font-size: 24px;
+    color: #ffffff;
+    border: solid 3px #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    margin-top: 40px;
+    transition: 0.3s;
+}
+.con4 button:hover{
+    background: #ffffff;
+    color:#434C4B;
+}
+.con5{
+    margin-top: 70px;
+}
+.con5 h1{
+    font-family: latoBold;
+    font-size: 50px;
+}
+.con5 p{
+    font-family: lato;
+    font-size: 25px;
+}
+.con5 label{
+    position: relative;
+}
+input[type="text"]{
+    border: none;
+    width: 460px;
+    height: 50px;
+    padding: 0 16px;
+    font-family: lato;
+    font-size: 17px;
+}
+.con5 button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #65451f91;
+    color: #ffffff;
+    font-family: latobold;
+    padding: 0 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.con5 button:hover{
+    background-color: #65451F;
+}
+#progress{
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	height: 70px;
+	width: 70px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+#progress-value{
+	display: block;
+	height: calc(100% - 15px);
+	width: calc(100% - 15px);
+	background-color: #ffffff;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	font-size: 35px;
+	color: #FC6A03;
+}

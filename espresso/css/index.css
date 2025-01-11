@@ -1,0 +1,33 @@
+@font-face {
+    font-family: Amita;
+    src:url(../fonts/Amita/Amita-Regular.ttf);
+}
+@font-face {
+    font-family: AmitaBold;
+    src:url(../fonts/Amita/Amita-Bold.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src:url(../fonts/Lato-Regular.ttf);
+}
+#espresso{
+    font-family: Amita;
+}
+#espresso1{
+    font-family: AmitaBold;
+}
+body{
+    font-family: lato;
+    letter-spacing: 1px;
+}
+.btn{
+    
+    border: 2px solid #fff;
+}
+.card {
+    padding-bottom:30px;
+}
+.body{
+
+}

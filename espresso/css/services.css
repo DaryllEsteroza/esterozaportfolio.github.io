@@ -1,0 +1,113 @@
+@font-face {
+    font-family: Amita;
+    src:url(../fonts/Amita/Amita-Regular.ttf);
+}
+@font-face {
+    font-family: AmitaBold;
+    src:url(../fonts/Amita/Amita-Bold.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src:url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: latoBold;
+  src:url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: latoBlack;
+  src:url(../fonts/Lato-Black.ttf);
+}
+@font-face {
+  font-family: chalk;
+  src:url(../fonts/cf-blackboard-font/CfBlackboardPersonalRegular-AKPg.ttf);
+}
+body{
+    
+}
+.con1{
+    background: linear-gradient(to right, rgba(81, 82, 83, 0.6), rgba(81, 82, 83, 0.6)),url(../images/servbg.webp);
+    background-repeat: no-repeat;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+.con1 .servtitle{
+    letter-spacing: 2px;
+    font-family: latobold;
+    font-size: 90px;
+    color: #fff; 
+}
+.con1 p{
+    font-family: lato;
+    color: #fff;
+    font-size: 25px;
+}
+.con2{
+    margin-top: 50px;
+}
+.con2 .titltext{
+    text-align: center;
+  font-weight: bold;
+   text-transform: uppercase;
+   font-size: 35px;
+}
+.con2 p{
+    text-align: center;
+    font-family: lato;
+    font-size: 25px;
+}
+.con2 .grab{
+    
+}
+.con2 .grab img{
+    width: 200px;
+}
+.con2 .foodpanda img{
+    width: 250px;
+}
+#progress{
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	height: 70px;
+	width: 70px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+#progress-value{
+	display: block;
+	height: calc(100% - 15px);
+	width: calc(100% - 15px);
+	background-color: #ffffff;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	font-size: 35px;
+	color: #FC6A03;
+}
+
+/* .con2 .row img{
+    max-height: 250px;
+} */
+.con2 .row .dlv{
+    max-width: 200px;
+}
+.con2 .row .pck{
+    max-width: 160px;
+}
+.con2 .servserv h1{
+    font-family: latobold;
+    font-size: 25px;
+}
+.con2 .servserv{
+  
+   /* Adjust the gap as needed */
+  justify-content: center; /* Centers the child elements horizontally */
+  align-items: center; /* Centers the child elements vertically */ /* Centers text within each child element */
+  margin-bottom: 100px;
+}

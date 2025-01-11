@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/products.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container conprod">
+        
+        <div class="d-flex flex-row-reverse"><button class="btn-warning"><i class="fa-solid fa-arrow-left"></i>RETURN</button></div>
+        <h1 class="mb-3">PRODUCTS</h1>
+        <div class="row">
+            <table class="table table-success table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Product ID</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Description</th>
+                    <th scope="col">Product Price</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Stocks</th>
+                    <th scope="col"><center>OPTIONS</center></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Coffee</td>
+                    <td>caramel with coffee Iced</td>
+                    <td>150.00</td>
+                    <td>sample</td>
+                    <td>10</td>
+                    <td><center><button class="btn-primary" data-bs-toggle="modal" data-bs-target="#updatemodal"><i class="fa-solid fa-pen"></i>Update</button>
+                        <button class="btn-danger" data-bs-toggle="modal" data-bs-target="#deletemodal"><i class="fa-solid fa-trash"></i>Delete</button></center>
+                    </td>
+                  </tr>
+                
+                  
+                
+              
+                </tbody>
+              </table>
+              <button class="btnadd btn-success" data-bs-toggle="modal" data-bs-target="#addmodal"><i class="fa-solid fa-plus"></i> ADD PRODUCTS</button>
+        </div>
+    </div>
+
+	
+			<script>
+
+			 Swal.fire(
+  				'Success!',
+  				'Registration Successful!',
+  				'success'
+			)
+			
+			</script>
+
+			
+			<?php
+		}
+
+	?> 
+
+
+
+<!-- ADD Modal -->
+<div class="modal fade" id="addmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">ADD PRODUCT</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Product Name" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Product Price" aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" placeholder="Availability" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          
+          <div class="input-container">
+            <p class="uploadprof">Upload Profile Picture</p>
+          <input type="file" class="input-field" name="fileToUpload" id="fileToUpload" value="" required>
+          <label for="input-field" class="input-label">Upload Image</label>
+          <span class="input-highlight"></span>												
+          </div>
+         
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">Description</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Insert</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!-- Update Modal -->
+<div class="modal fade" id="updatemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">UPDATE</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Product Name" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Product Price" aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" placeholder="Availability" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          
+            <input type="file" id="myFile" name="filename">
+         
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">Description</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deletemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       <h3>Warning!</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete this product?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+@font-face {
+    font-family: gundam;
+    src:url(font/Serpentine/Serpentine.otf);
+}
+@font-face {
+  font-family: gundam;
+  src:url(font/Demo_Fonts/Fontspring-DEMO-proximanova-regular.otf);
+}@font-face {
+  font-family: gundam;
+  src:url(font/Demo_Fonts/Fontspring-DEMO-proximanova-medium.otf);
+}@font-face {
+  font-family: gundam;
+  src:url(font/Demo_Fonts/Fontspring-DEMO-proximanova-light.otf);
+}@font-face {
+  font-family: gundam;
+  src:url(font/Demo_Fonts/Fontspring-DEMO-proximanova-semibold.otf);
+}@font-face {
+  font-family: gundam;
+  src:url(font/Demo_Fonts/Fontspring-DEMO-proximanova-bold.otf);
+}@font-face {
+  font-family: gundam;
+  src:url(font/Demo_Fonts/Fontspring-DEMO-proximanova-black.otf);
+}
+
+body{
+  
+}

@@ -1,0 +1,562 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="css/landingpage.css"/> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="app.js"></script>
+    <script defer src="nav.js"></script>
+    <script defer src="script.js"></script>
+    <script>
+    // Inline Tailwind CSS configuration
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            customBlue: '#1E40AF',
+          },
+        },
+      },
+      darkMode: 'class', // Enable dark mode with the 'class' strategy
+    };
+  </script>
+
+</head>
+<body class="bg-[#FDFDFD] dark:bg-[#282828]">
+
+
+<nav class="bg-[#3D4782] dark:bg-[#3f3f3f]">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-2">
+    <div class="relative flex h-16 items-center justify-between">
+      <!-- Mobile menu button (visible only on smaller screens) -->
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <!-- Icon when menu is closed -->
+          <svg
+            id="hamburger-icon"
+            class="block size-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!-- Icon when menu is open -->
+          <svg
+            id="close-icon"
+            class="hidden size-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Logo and main nav links -->
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="logo flex shrink-0 items-center">
+          <img class="h-8" src="images/darlogowhite1.png" alt="Your Company" />
+        </div>
+        
+        <!-- Main nav items (visible on larger screens) -->
+        <div class="item1 hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="rounded-md bg-[#7266C9] dark:bg-[#7A1CAC] px-3 py-2 text-base font-medium text-white"
+              aria-current="page"
+            >Home</a>
+            <a href="#abtid" class="rounded-md px-3 py-2 text-base font-medium text-white hover:text-white">About</a>
+            <a href="#prjid" class="rounded-md px-3 py-2 text-base font-medium text-white hover:text-white">Projects</a>
+            <a href="#srvid" class="rounded-md px-3 py-2 text-base font-medium text-white hover:text-white">Services</a>
+            <a href="#tstid" class="rounded-md px-3 py-2 text-base font-medium text-white hover:text-white">Testimonials</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Profile dropdown -->
+      <div class="item2 absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <div class="relative ml-3">
+          <div class="flex gap-3">
+            <a href="message.php" class="text-white text-2xl pt-1"><i class="fa-regular fa-paper-plane"></i></a>
+            <button
+              class="border-2 border-white rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+            >
+              <img src="images/ddddd.jpg" class="h-10 rounded-full" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu (hidden by default, shown when mobile menu button is clicked) -->
+  <div class="sm:hidden hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2">
+      <a href="#"
+        class="block rounded-md bg-[#7266C9] dark:bg-[#7A1CAC] px-3 py-2 text-base font-medium text-white"
+        aria-current="page">Home</a>
+        <a href="#abtid" id="aboutLink" data-target="aboutid" class="rounded-md px-3 py-2 text-base font-medium text-white hover:text-white">About</a>
+
+      <a href="#prjid" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Projects</a>
+      <a href="#srvid" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Services</a>
+      <a href="#tstid" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Testimonials</a>
+    </div>
+  </div>
+
+</nav>
+
+ <div id="progress" class="">
+   <span id="progress-value" class="">&#x1F815</span>
+ </div>
+
+    <div class="px-16 md:px-28 xl:px-28 py-5 relative min-h-screen">
+    <div class="absolute">
+     
+  <button 
+    class="mt-2 p-2 bg-transparent dark:text-[#FFEB3B] transition-colors duration-700 ease-in-out"
+    onclick="toggleTheme(this)">
+    <i class="fa-solid fa-moon text-4xl"></i>
+  </button>
+</div>
+
+<script>
+  // Apply the saved theme on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  });
+
+  // Toggle theme and save the preference in localStorage
+  function toggleTheme(button) {
+    const isDarkMode = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+
+    const icon = button.querySelector('i');
+    if (isDarkMode) {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+    }
+  }
+</script>
+    <div class="dartitle mt-40 xl:mt-48 ">
+        <h1 class="dark:text-[#ffffff] text-[#28357C] text-5xl md:text-7xl xl:text-6xl"><span class="wavinghand">👋🏻</span>Hello there,</h1>
+        <h1 class="text-[#28357C] dark:text-[#ffffff] text-6xl md:text-7xl xl:text-6xl">Im <span class="text-6xl md:text-7xl xl:text-7xl text-[#7266C9] dark:text-[#d1a0ff]">DARYLL ESTEROZA</span></h1>
+        <h2 class="mt-2 text-[#28357C] dark:text-[#ffffff] text-2xl ">Aspiring <span class="text-[#7266C9] dark:text-[#d1a0ff] animated-underline">Web Developer</span> from Philippines.</h2>
+        <a href="resume/Esteroza_Resume.pdf" download="Resume">
+  <button class="mt-12 text-[#28357C] dark:text-[#ffffff] text-3xl border-2 border-[#28357C] dark:border-[#ffffff] px-6 py-3 rounded-md hover:text-white hover:bg-[#7A1CAC] ease-in duration-200">
+    Download CV
+  </button>
+</a>
+    </div>
+    <div class="mt-40 xl:mt-0"><img src="prof.png" alt="" class=" w-full lg:w-1/5 xl:w-2/5 xl:absolute xl:bottom-20 right-20 dark:brightness-95 dark:hue-rotate-15"></div>
+    </div>
+    
+    <svg preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80" class="svgbg  inset-0 -z-10 absolute">
+    
+   
+    <path fill="" class="out-top opacity-20 dark:opacity-90 fill-[#bbb0e5] dark:fill-[#2b1b3a]" d="M37-5C25.1-14.7,5.7-19.1-9.2-10-28.5,1.8-32.7,31.1-19.8,49c15.5,21.5,52.6,22,67.2,2.3C59.4,35,53.7,8.5,37-5Z"/>
+    <path fill="" class="in-top opacity-20 dark:opacity-90 fill-[#a497dc] dark:fill-[#1e1229]" d="M20.6,4.1C11.6,1.5-1.9,2.5-8,11.2-16.3,23.1-8.2,45.6,7.4,50S42.1,38.9,41,24.5C40.2,14.1,29.4,6.6,20.6,4.1Z"/>
+    <path fill="" class="out-bottom fill-[#bbb0e5] opacity-50 dark:opacity-90 dark:fill-[#2b1b3a]" d="M105.9,48.6c-12.4-8.2-29.3-4.8-39.4.8-23.4,12.8-37.7,51.9-19.1,74.1s63.9,15.3,76-5.6c7.6-13.3,1.8-31.1-2.3-43.8C117.6,63.3,114.7,54.3,105.9,48.6Z"/>
+    <path fill="" class="in-bottom opacity-90 fill-[#a497dc] dark:opacity-90 dark:fill-[#1e1229]" d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z"/>
+</svg>
+<section class="" id="abtid">
+    <div class="quotes bg-[#3D4782] dark:bg-[#3f3f3f] text-center  py-8 xl:py-12 text-[#FDFDFD] -translate-y-20">
+        <h1 class="px-8 xl:px-0 text-lg lg:text-2xl">“Setting goals is the first step in turning the invisible into the visible.”</h1>
+        <h2 class="mt-2 text-[#FDFDFD] text-xl">-<span class="author">Tony Robbins</span></h2>
+    </div>
+    <div>
+   
+  <div class="block">
+    <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 px-4 xl:px-32 mt-10" id="aboutid">
+  <div class="abouttxt group dark:bg-[#3f3f3f] shadow-md hover:shadow-none px-10 py-6 hover:translate-y-[-30px] hover:border-4 border-[#28357c] dark:border-[#d1a0ff] rounded-lg transition duration-500 ease-out" >
+    <h1 class="text-[#28357c] dark:text-[#FFFFFF] text-3xl xl:text-5xl">WHO<span>'</span>S THIS GUY <span class="qmark">?</span></h1>
+            <h2 class="text-md text-black dark:text-white text-lg mt-4 text-justify">I’m an aspiring to become a Web Developer from Taguig City, Philippines. Graduated of Bachelor of Science in Computer Science in Taguig City University. I have a serious passion for web development and web design.</h2>
+  </div>
+  
+  <div class="abouttxt group dark:bg-[#3f3f3f] shadow-md hover:shadow-none px-10 py-6 mt-4 xl:mt-0 hover:translate-y-[-30px] hover:border-4 rounded-lg border-[#28357c] dark:border-[#d1a0ff] transition duration-500 ease-out">
+    <h1 class="text-[#28357c] dark:text-[#FFFFFF] text-3xl xl:text-5xl">SKILLS <i class="fa-regular fa-lightbulb group-hover:text-yellow-400 group-hover:rotate-12 group-hover:translate-y-[-10px] duration-300"></i></h1>
+    <p class="text-justify text-black dark:text-white text-lg mt-4">Driven by a deep passion for graphic design and web development, I specialize in harmonizing the logic of code with the aesthetics of design. This ensures effective intervention on all aspects of the project.</p>
+  </div>
+</div>  
+</div>
+
+
+<div class="block">
+    <div class="progskills uppercase px-4 xl:px-32 grid grid-cols-1  xl:grid-cols-3 gap-4  mt-10 xl:mt-10 text-xl xl:text-2xl text-[#28357C] dark:text-[#FFFFFF] text-center">
+            <div class="shadow-md w-full dark:bg-[#3f3f3f] rounded-sm  py-6 hover:translate-y-[-30px] hover:border-2 border-[#28357C] dark:border-[#d1a0ff] transition duration-300 ease-out">
+               
+                <div class="flex gap-2  justify-center ">
+                <img class="h-11" src="images/php-logo-768x768.png">
+                <img class="h-11" src="images/javascript-logo-7539.png">
+                <img class="h-11" src="images/470388.webp">
+                <img class="h-11" src="images/image_processing20210706-12803-1t454ae.png">
+                <img class="h-11" src="images/NET.png">
+                <img class="h-11" src="images/csharp-icon-877x1024-u90gkl28.png">
+                <img class="h-11" src="images/mysql_PNG23.png">
+                </div>
+                <h1 class="mt-4">Programming Language</h1>
+            </div>
+            <div class="mt-6 xl:mt-0 py-6 rounded-sm  dark:bg-[#3f3f3f] shadow-md w-full hover:translate-y-[-30px] hover:border-2 border-[#28357C] dark:border-[#d1a0ff] transition duration-300 ease-out">
+                
+                <div class="flex gap-6 justify-center">
+                <img class="h-11" src="images/bootstrap-logo.png">
+                <img class="h-11" src="images//Tailwind_CSS_Logo.svg.png">
+                </div>
+                <h1 class="mt-4">Framework</h1>
+            </div>
+            <div class="mt-6 xl:mt-0 dark:bg-[#3f3f3f] rounded-sm  shadow-md w-full py-6 hover:translate-y-[-30px] hover:border-2 border-[#28357C] dark:border-[#d1a0ff] transition duration-300 ease-out">
+                
+                <div class="flex gap-4 justify-center ">
+                <img class="h-11" src="images/icon figma vector.png">
+                <img class="h-11" src="images/wordpress_PNG47.png">
+                <img class="h-11" src="images/joomla-logo-5B8F90ADD3-seeklogo.com.png">
+                <img class="h-11" src="images/photoshop-logo-png-open-2000.png">
+                <img class="h-11" src="images/Canva-Logo-2023.png">
+                </div>
+                <h1 class="mt-4">UI <spaN>/</spaN> Designing Tool</h1>
+            </div>
+    </div>
+</div>
+    </section>
+
+   
+    <div class="exp mt-32">
+      <div class="px-6  md:px-20 lg:px-36 ">
+          
+      
+        <div class=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3">
+          <div class="">
+          <h1 class="jobexp text-3xl lg:text-5xl text-[#28357C] dark:text-[#ffffff] mb-10 text-center">EXPERIENCE</h1>
+          </div>
+          <div class="col-span-1 md:col-span-1 lg:col-span-2">
+           <div class=" flex-none md:flex lg:flex block">
+            <div class="w-full"><h1 class="ptri text-2xl text-white bg-[#28357C] dark:bg-[#7A1CAC] py-4 text-center rounded-t-xl md:rounded-tr-none md:rounded-l-xl lg:rounded-l-full">DOST<span class=" font-sans font-bold">-</span>PTRI</h1></div>
+           <div class="border-2 dark:border-0 shadow-lg lg:rounded-r-xl lg:rounded-bl-lg rounded-b-xl md:rounded-b-none lg:rounded-b-none "><p class="jobexp1 rounded-bl-lg text-lg dark:text-[#ffffff]  text-justify dark:bg-[#3f3f3f] py-5 px-8 dark:rounded-r-xl">
+          I<span class=" font-sans">'</span>ve done my Internship in Department of Science and Technology <span class=" font-sans">-</span> Phillipine Textile Research Institute as a Programmer and doing Trouble Shooting and networking Stuff as well as Guiding the other interns in terms of programming.
+        </p></div>
+           
+           </div>
+           <div class=" flex-none md:flex lg:flex mt-6 block">
+            <div class="w-full"><h1 class="ptri text-2xl text-white bg-[#28357C] dark:bg-[#7A1CAC] py-4 text-center rounded-t-xl md:rounded-tr-none md:rounded-l-xl lg:rounded-l-full">FREELANCE</h1></div>
+           <div class="border-2 dark:border-0 shadow-lg lg:rounded-r-xl lg:rounded-bl-lg rounded-b-xl md:rounded-b-none lg:rounded-b-none "><p class="jobexp1 rounded-bl-lg text-lg dark:text-[#ffffff]  text-justify dark:bg-[#3f3f3f] py-5 px-8 dark:rounded-r-xl">
+           Engaged in freelancing, where I successfully designed and developed various systems and websites for clients. This experience allowed me to refine my technical skills, manage projects independently, and deliver solutions tailored to diverse requirements.
+        </p></div>
+           
+           </div>
+          </div>
+      
+         
+         </div>
+        </div>  
+    </div>
+    
+   
+  <div class="" id="prjid">
+    <h1 class="latestwork text-3xl lg:text-5xl text-[#28357C] text-center dark:text-[#ffffff] mt-20 uppercase">Latest work</h1>
+  </div>
+  <div class="icon-scroll mt-5"></div>
+  <div class="block">
+  <div class="relative px-4 md:px-7 lg:px-20 xl:px-44 mt-7 works">
+  <img src="images/Screenshot 2024-10-03 100529.png" alt="" class="w-full opacity-50 border-2">
+  <a href="https://philippinetextilecongress.com/" target="_blank">
+  <button class=" border-none dark:hover:bg-[#7A1CAC] dark:bg-[#3f3642] border-[#000000] py-1 md:py-2 lg:py-2 xl:py-2 px-2 md:px-4 lg:px-4 xl:px-4 text-md md:text-lg lg:text-lg xl:text-lg rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[100px] bg-[#565656] text-white hover:bg-black ease-in-out duration-300">
+    View Website <i class="fa-solid fa-globe"></i>
+  </button>
+  </a>
+  
+  <div class=" absolute top-0 left-[16px] md:left-[30px] lg:left-[80px] xl:left-[177px] bg-[#28357C] dark:bg-[#7A1CAC] w-[80px] md:w-[110px] lg:w-[140px] xl:w-[140px] h-[110px] md:h-[120px] lg:h-[150px] xl:h-[150px] px-6 py-6 rounded-br-full">
+  <h1 class=" text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white">1</h1>
+  </div>
+  <div class="bg-[#3D4782] dark:bg-[#535252] text-white px-7 py-6 -translate-y-0 md:-translate-y-10 lg:-translate-y-24 xl:-translate-y-24 ">
+    <h1 class=" uppercase text-xl md:text-2xl lg:text-2xl xl:text-2xl">DOST<span class=" font-bold font-serif">-</span>PTRI philippines CONGRESS</h1>
+    <p class="text-lg md:text-lg lg:text-xl xl:text-xl">Event Scheduling and Attendance Monitoring System with Data Analytics</p>
+  </div>
+</div></div>
+<div class="block">
+<div class="relative px-4 md:px-7 lg:px-20 xl:px-44 mt-12 works">
+  <img src="images/Screenshot 2024-10-08 124039.png" alt="" class="w-full opacity-50 border-2">
+  <a href="espresso/php/homepage.php" target="_blank">
+  <button class=" border-none dark:hover:bg-[#7A1CAC] dark:bg-[#3f3642] border-[#000000] py-1 md:py-2 lg:py-2 xl:py-2 px-2 md:px-4 lg:px-4 xl:px-4 text-md md:text-lg lg:text-lg xl:text-lg rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[100px] bg-[#565656] text-white hover:bg-black ease-in-out duration-300">
+    View Website <i class="fa-solid fa-globe"></i>
+  </button>
+  </a>
+  
+  <div class=" absolute top-0 left-[16px] md:left-[30px] lg:left-[80px] xl:left-[177px] bg-[#28357C] dark:bg-[#7A1CAC] w-[80px] md:w-[110px] lg:w-[140px] xl:w-[140px] h-[110px] md:h-[120px] lg:h-[150px] xl:h-[150px] px-6 py-6 rounded-br-full">
+  <h1 class=" text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white">2</h1>
+  </div>
+  <div class="bg-[#3D4782] dark:bg-[#535252] text-white px-7 py-6 -translate-y-0 md:-translate-y-10 lg:-translate-y-24 xl:-translate-y-24 ">
+    <h1 class=" uppercase text-xl md:text-2xl lg:text-2xl xl:text-2xl">ESPRESSO CLUB</h1>
+    <p class="text-lg md:text-lg lg:text-xl xl:text-xl">Online Ordering System with Decision Support Using Data Analytics</p>
+  </div>
+</div>
+</div>
+<div class="block">
+<div class="relative px-4 md:px-7 lg:px-20 xl:px-44 mt-12 works">
+  <img src="images/Screenshot 2024-10-08 152616.png" alt="" class="w-full opacity-50 border-2">
+  <a href="shoplant/index.php" target="_blank">
+  <button class=" border-none dark:hover:bg-[#7A1CAC] dark:bg-[#3f3642] border-[#000000] py-1 md:py-2 lg:py-2 xl:py-2 px-2 md:px-4 lg:px-4 xl:px-4 text-md md:text-lg lg:text-lg xl:text-lg rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[100px] bg-[#565656] text-white hover:bg-black ease-in-out duration-300">
+    View Website <i class="fa-solid fa-globe"></i>
+  </button>
+  </a>
+  
+  <div class=" absolute top-0 left-[16px] md:left-[30px] lg:left-[80px] xl:left-[177px] bg-[#28357C] dark:bg-[#7A1CAC] w-[80px] md:w-[110px] lg:w-[140px] xl:w-[140px] h-[110px] md:h-[120px] lg:h-[150px] xl:h-[150px] px-6 py-6 rounded-br-full">
+  <h1 class=" text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white">3</h1>
+  </div>
+  <div class="bg-[#3D4782] dark:bg-[#535252] text-white px-7 py-6 -translate-y-0 md:-translate-y-10 lg:-translate-y-24 xl:-translate-y-24 ">
+    <h1 class=" uppercase text-xl md:text-2xl lg:text-2xl xl:text-2xl">SHOP PLANT</h1>
+    <p class="text-lg md:text-lg lg:text-xl xl:text-xl">E<span class=" font-sans">-</span>Commerce Management and Ordering System with User Feedback Integration</p>
+  </div>
+</div></div>
+
+<div class=" text-center mt-10 bg-[#3D4782] h-64 pt-10 dark:bg-[#252525]" id="srvid">
+  <h1 class="servtit text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-[#ffffff] dark:text-[#ffffff]">SERVICES</h1>
+  <div class="block">
+  <div class="progskills px-4 xl:px-32 grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 gap-4  mt-10 xl:mt-10 text-xl xl:text-2xl text-[#000000] dark:text-[#ffffff] text-center">
+            <div class="shadow-md w-full py-6  dark:border-[#ffffff]  rounded-xl bg-white dark:bg-[#535252]  dark:border-2 border-0 h-auto md:h-auto lg:h-80 ">
+                <h1 class="mt-3 text-[#535252] dark:text-[#ffffff]">WEB DEVELOPING</h1>
+                <div class="flex items-center justify-center mt-4">
+                <i class="fa-solid fa-code text-4xl text-[#535252] dark:text-[#ffffff]"></i>
+                </div>
+                <p class="servtxt text-base mt-6 px-8 text-justify">I am a passionate web developer with expertise in designing and building dynamic, user<span>-</span>friendly websites and reliable websites.</p>
+            </div>
+            <div class=" xl:mt-0 py-6  shadow-md w-full  dark:border-[#ffffff] rounded-xl bg-white dark:bg-[#535252] dark:border-2 border-0 h-auto md:h-auto lg:h-80 ">
+                <h1 class="mt-3 text-[#535252] dark:text-[#ffffff]">WEB DESIGN</h1>
+                <div class="flex items-center justify-center mt-4">
+                <i class="fa-solid fa-pen-nib text-4xl text-[#535252] dark:text-[#ffffff]"></i>
+                </div>
+                <p class="servtxt text-base mt-6 px-8 text-justify">I am a creative web designer specializing in crafting visually appealing and intuitive designs that enhance user experiences and bring ideas to life across various platforms.</p>
+            </div>
+            <div class=" xl:mt-0 shadow-md w-full py-6   dark:border-[#ffffff] rounded-xl mb-4 bg-white dark:bg-[#535252] dark:border-2 border-0 h-auto md:h-auto lg:h-80">
+                
+                <div class="flex gap-4 justify-center ">
+             
+                </div>
+                <h1 class=" mt-3 text-[#535252] dark:text-[#ffffff] ">TROUBLE SHOOTING</h1>
+                <div class="flex items-center justify-center mt-4">
+                <i class="fa-solid fa-computer text-4xl text-[#535252] dark:text-[#ffffff]"></i>
+                </div>
+                <p class="servtxt text-base mt-6 px-8 text-justify">With extensive experience in diagnosing and resolving a wide range of hardware and software issues, I specialize in delivering efficient and effective computer troubleshooting services.</p>
+                
+            </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="block">
+<div class="contms mt-[750px]  md:mt-[500px] lg:mt-[650px] xl:mt-[350px] mb-0 md:mb-32 lg:mb-32"> 
+  <h1 class="text-center text-xl md:text-2xl lg:text-3xl text-[#3e3e3e] dark:text-white">Interested in collaboration with me?</h1> 
+  <p class="text-center text-lg md:text-xl lg:text-xl mt-5 dark:text-white">I<span class=" font-sans">'</span>m always open to discussing work or partnership opportunities.</p> 
+  <div class="flex justify-center mt-10">
+    <a href="message.php" class="no-underline hover:no-underline self-center text-lg md:text-xl lg:text-2xl border-2 px-7 py-4 dark:border-[#cd85f4] dark:text-[#cd85f4] dark:hover:bg-[#7A1CAC] dark:hover:border-[#7A1CAC] dark:hover:text-white  border-[#3D4782] text-[#3D4782] hover:text-white hover:bg-[#3D4782] ease-in-out delay-150 duration-300 rounded-full"><i class="fa-solid fa-message mr-3"></i>Start a conversation</a>
+  </div>
+</div>
+</div>
+
+<div class="testimonialtit px-10 md:px-64 lg:px-64 xl:px-64 mt-24 md:mt-0  lg:mt-0  xl:mt-0 ">
+<H1 class="text-center text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-[#3D4782] dark:text-[#ffffff]">TESTIMONIALS</H1>
+<div class="text-start md:text-end lg:text-end xl:text-end">
+<i class="fa-regular fa-hand-pointer  fingerslide absolute text-2xl text-[#000000] dark:text-white opacity-70 dark:opacity-100 mt-4 "></i>
+</div>
+
+</div>
+<div class="testimonial" id="tstid">
+      
+    <div class="swiper h-[550px] md:h-[420px] lg:h-[420px] xl:h-[420px] w-[900px] md:w-[1100px] lg:w-[1100px] mt-6 mb-20 ">
+    
+  <div class="swiper-wrapper gap-2">
+
+    <div class="swiper-slide">
+        <div class="flex gap-4 px-2">
+        <div class="testi group relative w-1/2 md:w-[760px] lg:w-[1020px] xl:w-full bg-[#3D4782] dark:bg-[#535252]  border-4 border-[#3D4782] dark:border-[#ffffff] mt-16 px-4 py-10 flex flex-col items-center justify-center rounded-lg hover:translate-y-[-20px]  duration-500">
+    <img src="images/diet.jpg" alt="" class="rounded-full h-24 absolute top-0 -translate-y-12 bg-[#ffffff] group-hover:bg-[#FDCC0D] px-2 py-2 duration-300">
+    <h1 class="text-[#ffffff] text-lg mt-4">Diether Causapin</h1>
+    <div class="text-[#FDCC0D] text-sm mt-1">  
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    </div>
+    <div class="mt-4">
+        <p class="text-[#ffffff] text-sm md:text-md lg:text-md xl:text-md text-center px-2">“Mr. Daryll<span class=" font-sans">'</span>s enthusiasm towards the profession is seen, he works well as a team member and provides valuable ideas, He has demonstrated extensive knowledge in various programming languages, and his eagerness to learn from others showcases his commitment to personal and professional growth, making him truly exceptional , I had the pleasure of mentoring him during an internship program, and I can confidently say he is one of the brightest talents I’ve encountered. His eagerness to learn, coupled with his technical skills, ensures that he will excel in any web development role, consistently delivered high<span class=" font-sans">-</span>quality work under tight deadlines. His technical expertise and creative problem-solving helped us launch several successful projects ahead of schedule. A real asset to any team.”</p>
+    </div>
+</div>
+
+        </div>
+    
+
+    </div>
+    <div class="swiper-slide">
+    <div class="flex gap-4 px-6">
+    <div class="testi group relative w-1/2 md:w-[760px] lg:w-[1020px] xl:w-full bg-[#3D4782] dark:bg-[#535252] border-4 border-[#3D4782] dark:border-[#ffffff] mt-16 px-4 py-10 flex flex-col items-center justify-center rounded-lg hover:translate-y-[-20px] duration-500">
+    <img src="images/mariz.jpg" alt="" class="rounded-full h-24 absolute top-0 -translate-y-12 bg-[#ffffff] group-hover:bg-[#FDCC0D] px-2 py-2 duration-300">
+    <h1 class="text-[#ffffff] text-lg mt-4">Mariztela Clapis Jackson</h1>
+    <div class="text-[#FDCC0D] text-sm mt-1">  
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    </div>
+    <div class="mt-4">
+        <p class="text-[#ffffff] text-sm md:text-md lg:text-md xl:text-md text-center px-6">“Daryll is an excellent team player. During our college and internship days, he consistently offered invaluable assistance with our programming projects. Even with his busy schedule, he generously shared his knowledge. It<span class=" font-sans">'</span>s a privilege to work with him because of his kind nature and strong work ethic.”</p>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <div class="swiper-slide">
+    <div class="flex px-6 ">
+    <div class="testi w-1/2 md:w-[760px] lg:w-[1020px] xl:w-full group relative bg-[#3D4782] dark:bg-[#535252] border-4 border-[#3D4782] dark:border-[#ffffff] mt-16 px-4 py-10 flex flex-col items-center justify-center rounded-lg hover:translate-y-[-20px] duration-500">
+    <img src="images/mikes.jpg" alt="" class="rounded-full h-24 absolute top-0 -translate-y-12 bg-[#ffffff] group-hover:bg-[#FDCC0D] px-2 py-2 duration-300">
+    <h1 class="text-[#ffffff] text-lg mt-4">Mike Lester Azuela Carillo</h1>
+    <div class="text-[#FDCC0D] text-sm mt-1">  
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    </div>
+    <div class="mt-4">
+        <p class="text-[#ffffff] text-sm md:text-md lg:text-md xl:text-md text-center px-6">“During my internship days back in college, I had the opportunity to work with Daryll. I can say that his dedication to learning is unbelievable, and the trait I really admire in Daryll is his attitude
+        ”</p>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <div class="swiper-slide">
+    <div class="flex px-6 ">
+    <div class="testi w-1/2 md:w-[760px] lg:w-[1020px] xl:w-full group relative bg-[#3D4782] dark:bg-[#535252] border-4 border-[#3D4782] dark:border-[#ffffff] mt-16 px-4 py-10 flex flex-col items-center justify-center rounded-lg hover:translate-y-[-20px] duration-500">
+    <img src="images/naims.jpg" alt="" class="rounded-full h-24 absolute top-0 -translate-y-12 bg-[#ffffff] group-hover:bg-[#FDCC0D] px-2 py-2 duration-300">
+    <h1 class="text-[#ffffff] text-lg mt-4">Naima Kasim Gaos</h1>
+    <div class="text-[#FDCC0D] text-sm mt-1">  
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    </div>
+    <div class="mt-4">
+        <p class="text-[#ffffff] text-sm md:text-md lg:text-md xl:text-md text-center px-6">“Working with Daryll during our internship was a great experience because he’s the type of person who goes above and beyond to help you with any challenges. He’s determined to resolve issues and won’t stop until he does.”</p>
+    </div>
+</div>
+
+        </div>
+    </div>
+  </div>
+ 
+  <div class="swiper-pagination ml-[-200px] md:ml-0 lg:ml-0"></div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+<footer class=" py-16 content-center bg-[#3D4782] dark:bg-[#3f3f3f]">
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4     bg-[#3D4782] dark:bg-[#3f3f3f] text-white px-20">
+ <div>
+ <div class="logo flex items-center justify-center  col-span-4 mt-2 md:mt-0 lg:mt-0">
+                <img class=" h-24 " src="images/darlogowhite1.png" alt="...">
+              
+            </div>
+ </div>
+
+ 
+ <div class="col-span-1 mt-8 md:mt-0 lg:mt-0">
+ <h1 class="follow text-white text-center">FOLLOW ME</h1>
+    <div class="text-white text-3xl flex gap-0 mt-3 justify-center">
+    <a href="https://www.facebook.com/profile.php?id=100086400400094" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com/dadrylll/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.youtube.com/@daryllesteroza9542" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    
+    
+   
+    
+    </div>
+ </div>
+ <div class="tagsitem col-span-1 mt-8 md:mt-0 lg:mt-0">
+    <h1 class="tags text-center lg:text-start">TAGS</h1>
+    <div class="mt-3 text-center lg:text-start">
+    <span class="bg-[#525ea3] dark:bg-[#7A1CAC]  px-2 rounded-md mt-2">PHP</span>
+       <span class="bg-[#525ea3] dark:bg-[#7A1CAC] px-2 rounded-md ">HTML</span>
+       <span class="bg-[#525ea3] dark:bg-[#7A1CAC] px-2 rounded-md">CSS</span>
+       <span class="bg-[#525ea3] dark:bg-[#7A1CAC] px-2 rounded-md">JAVASCRIPT</span>
+       <span class="bg-[#525ea3] dark:bg-[#7A1CAC] px-2 rounded-md">SQL</span>
+       <span class="bg-[#525ea3] dark:bg-[#7A1CAC] px-2 rounded-md">TAILWIND</span>
+       <span class="bg-[#525ea3] dark:bg-[#7A1CAC] px-2 rounded-md">BOOTSTRAP</span>
+       <span class="bg-[#525ea3] dark:bg-[#7A1CAC] px-2 rounded-md">FIGMA</span>
+       <span class="bg-[#525ea3] dark:bg-[#7A1CAC] px-2 rounded-md">VB.NET</span>
+       </div>
+       </div>
+ <div class="col-span-1 mt-8 md:mt-0 lg:mt-0 text-center lg:text-start">
+ <h1 class="follow1 text-white text-center lg:text-start">CONTACTS</h1>
+    
+    <h1 class="text-lg mt-2 text-white"><i class="fa-solid fa-phone mr-2"></i> +63 956-824-3599</h1>
+        <h1 class="text-lg text-white mt-2"><i class="fa-solid fa-envelope mr-2"></i> esterozad@gmail.com</h1>
+ </div>
+</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="homejs.js"></script>
+<script src="navjs.js"></script>
+<script src="modes.js"></script>
+<script src="nvgt.js"></script>
+</body>
+<script>
+        const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    
+
+   
+    });
+</script>
+
+   
+
+</html>

@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Lato-Black;
+    src: url(../fonts/Lato-Black.tff);
+  }
+  @font-face {
+    font-family: Lato-BlackItalic;
+    src: url(../fonts/Lato-BlackItalic.tff);
+  }
+  @font-face {
+    font-family: Lato-Bold;
+    src: url(../fonts/Lato-Bold.tff);
+  }
+  @font-face {
+    font-family: Lato-BoldItalic;
+    src: url(../fonts/Lato-BoldItalic.tff);
+  }
+  @font-face {
+    font-family: Lato-Italic;
+    src: url(../fonts/Lato-Italic.tff);
+  }
+  @font-face {
+    font-family: Lato-LightItalic;
+    src: url(../fonts/Lato-LightItalic.tff);
+  }
+  @font-face {
+    font-family: Lato-Regular;
+    src: url(../fonts/Lato-Regular.tff);
+  }
+  @font-face {
+    font-family: Lato-Thin;
+    src: url(../fonts/Lato-Thin.tff);
+  }
+  @font-face {
+    font-family: Lato-ThinItalic;
+    src: url(../fonts/Lato-ThinItalic.tff);
+  }
+  @font-face {
+    font-family: lato;
+    src:url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: latoBold;
+  src:url(../fonts/Lato-Bold.ttf);
+}
+
+.concheck{
+    margin-top: 50px;
+}
+.concheck .checktitle{
+    letter-spacing: 2px;
+    font-size: 35px;
+    font-family: latobold;
+    background-color: #3c9a3c;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.concheck .btn_checkout{
+    font-family: latobold;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.concheck .cod{
+    font-family: latobold;
+    font-size: 18px;
+    color: green;
+    
+}
+.concheck .colform{
+    margin-top: 0px;
+}
+#collapse1{
+  overflow-y:scroll;
+  height:200px;
+}
+.total{
+ border: solid #000000 1px;
+ padding-top: 10px;
+ padding-left: 10px;
+ width: 50%;
+}
+.total h1{
+  font-family: lato;
+  font-size: 20px;
+}
+.panel-group{
+  border: 1px solid #000;
+}

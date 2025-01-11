@@ -1,0 +1,159 @@
+@font-face {
+    font-family: Lato-Black;
+    src: url(../fonts/Lato-Black.tff);
+  }
+  @font-face {
+    font-family: Lato-BlackItalic;
+    src: url(../fonts/Lato-BlackItalic.tff);
+  }
+  @font-face {
+    font-family: Lato-Bold;
+    src: url(../fonts/Lato-Bold.tff);
+  }
+  @font-face {
+    font-family: Lato-BoldItalic;
+    src: url(../fonts/Lato-BoldItalic.tff);
+  }
+  @font-face {
+    font-family: Lato-Italic;
+    src: url(../fonts/Lato-Italic.tff);
+  }
+  @font-face {
+    font-family: Lato-LightItalic;
+    src: url(../fonts/Lato-LightItalic.tff);
+  }
+  @font-face {
+    font-family: Lato-Regular;
+    src: url(../fonts/Lato-Regular.tff);
+  }
+  @font-face {
+    font-family: Lato-Thin;
+    src: url(../fonts/Lato-Thin.tff);
+  }
+  @font-face {
+    font-family: Lato-ThinItalic;
+    src: url(../fonts/Lato-ThinItalic.tff);
+  }
+  @font-face {
+    font-family: lato;
+    src:url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: latoBold;
+  src:url(../fonts/Lato-Bold.ttf);
+}
+.con_user_nav .icon-cart i{
+    font-size: 25px;
+    
+}
+.con_user_nav .icon-cart{
+    border: none;
+    padding: 9px 9px;
+    border-radius: 5px;
+}
+.modalcart .modal-body .wrapper .item{
+  align-items: center;
+  font-family: lato;
+  font-size: 18px;
+}
+.modalcart .modal-body .wrapper .item img{
+   max-height:80px;
+}
+.modalcart .modal-body .wrapper .item .cart_prod_name{
+  font-family: latobold;
+}
+.modalcart .modal-body .wrapper .item .quan{
+  font-family: latobold;
+
+}
+.modalcart .modal-body .wrapper .item .quan span{
+  padding: 5px 5px;
+  border: none;
+}
+.modalcart .modal-body .wrapper .item .quan .minus{
+  margin-right: 5px;
+  background: #ffa856;
+  transition: 0.1s;
+}
+.modalcart .modal-body .wrapper .item .quan .minus:hover{
+  background: #ff7b00;
+}
+.modalcart .modal-body .wrapper .item .quan .plus{
+  background: #ffa856;
+  margin-left: 5px;
+  transition: 0.1s;
+}
+.modalcart .modal-body .wrapper .item .quan .plus:hover{
+  background: #ff7b00;
+}
+.modalcart .modal-body .modal-footer button{
+  font-family: latobold;
+}
+.modalcart .modnav .wrapper .input-group{
+  width: 200px;
+  font-family: latobold;
+  font-size: 25px;
+  
+}
+/* .modalcart .modnav .wrapper .input-group input{
+   
+} */
+.modalcart .modal-body .wrapper .deletebtn{
+  margin-bottom: 15px;
+  background: none;
+  border: none;
+}
+.modalcart .modal-body .wrapper .deletebtn i{
+  font-size: 22px;
+  color: #e60000;
+}
+.con_user_nav .logout{
+  font-family: latobold;
+}
+.con_user_nav .logout i{
+  padding-left: 10px;
+}
+.con_user_nav .delivery{
+  border: none;
+  padding: 9px 13px;
+    border-radius: 5px;
+}
+.con_user_nav .delivery i{
+  font-size: 23px;
+}
+.con_user_nav .prof{
+  border: none;
+    padding: 9px 15px;
+    border-radius: 5px;
+}
+.con_user_nav .prof{
+  font-size: 20px;
+}
+.Modalord .modal-body .ordstat p{
+  font-family: latobold;
+  font-size: 20px;
+  color: grey;
+}
+.ordstat .status {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.ordstat .status:not(:last-child)::after {
+  content: "";
+  border-right: 2px dashed #000; /* Adjust the color and thickness as needed */
+  height: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.Modalord .modal-body .input-group span{
+  font-family: latobold;
+  font-size: 15px;
+}
+.Modalord .modal-footer button{
+  font-family: latobold;
+  font-size: 17px;
+}

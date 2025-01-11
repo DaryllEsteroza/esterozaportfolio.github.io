@@ -1,0 +1,1 @@
+<?php $dbcon = mysqli_connect("localhost","root","","espresso") or die(mysqli_error()); ?>

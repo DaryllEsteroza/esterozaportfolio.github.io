@@ -1,0 +1,38 @@
+@font-face {
+    font-family: Amita;
+    src:url(../fonts/Amita/Amita-Regular.ttf);
+}
+@font-face {
+    font-family: AmitaBold;
+    src:url(../fonts/Amita/Amita-Bold.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src:url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: latoBold;
+  src:url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: latoBlack;
+  src:url(../fonts/Lato-Black.ttf);
+}
+@font-face {
+  font-family: chalk;
+  src:url(../fonts/cf-blackboard-font/CfBlackboardPersonalRegular-AKPg.ttf);
+}
+.conrep{
+    margin-top: 100px;
+}
+.conrep .btn-warning{
+    padding: 10px 20px;
+    font-family: latobold;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.conrep .btn-warning i{
+    padding-right: 10px;
+}

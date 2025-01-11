@@ -1,0 +1,100 @@
+@font-face {
+    font-family: Lato-Black;
+    src: url(../fonts/Lato-Black.tff);
+  }
+  @font-face {
+    font-family: Lato-BlackItalic;
+    src: url(../fonts/Lato-BlackItalic.tff);
+  }
+  @font-face {
+    font-family: Lato-Bold;
+    src: url(../fonts/Lato-Bold.tff);
+  }
+  @font-face {
+    font-family: Lato-BoldItalic;
+    src: url(../fonts/Lato-BoldItalic.tff);
+  }
+  @font-face {
+    font-family: Lato-Italic;
+    src: url(../fonts/Lato-Italic.tff);
+  }
+  @font-face {
+    font-family: Lato-LightItalic;
+    src: url(../fonts/Lato-LightItalic.tff);
+  }
+  @font-face {
+    font-family: Lato-Regular;
+    src: url(../fonts/Lato-Regular.tff);
+  }
+  @font-face {
+    font-family: Lato-Thin;
+    src: url(../fonts/Lato-Thin.tff);
+  }
+  @font-face {
+    font-family: Lato-ThinItalic;
+    src: url(../fonts/Lato-ThinItalic.tff);
+  }
+  @font-face {
+    font-family: lato;
+    src:url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: latoBold;
+  src:url(../fonts/Lato-Bold.ttf);
+}
+.navbar{
+  background: #ffffff;
+}
+  .logo{
+    width: 300px;
+  } 
+.btnnav{
+  font-family: lato;
+  font-size: 20px;
+  padding: 7px 10px;
+  border-radius: 10px;
+}
+.btnnav i{
+  padding-left: 10px;
+}
+.btnmessages{
+  font-family: lato;
+  padding: 10px 13px;
+  border-radius: 10px;
+  
+}
+.btnmessages i{
+  color: #ffffff;
+  font-size: 23px;
+}
+.modal .modal-body .messages .messages-inner{
+  background-color: bisque;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  border-radius: 10px;
+}
+.modal .modal-body .messages{
+  margin-bottom: 15px;
+}
+.modal .modal-body .messages .messages-inner button{
+  font-size: 10px;
+  float: right;
+  transform: translateX(20px) translateY(-15px);
+  border-radius: 100px;
+}
+.modal .modal-body .messages .message-content {
+  font-family: latobold;
+  font-size: 15px;
+}
+.modal .modal-body .messages .main-message {
+  font-family: lato;
+  font-size: 15px;
+}
+.modal .modal-body .messages .date-email {
+  font-family: lato;
+  font-size: 13px;
+}
+.modal .modal-body .messages .date-email .email{
+  text-decoration: underline;
+}

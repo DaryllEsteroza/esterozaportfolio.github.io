@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Amita;
+    src:url(../fonts/Amita/Amita-Regular.ttf);
+}
+@font-face {
+    font-family: AmitaBold;
+    src:url(../fonts/Amita/Amita-Bold.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src:url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: latoBold;
+  src:url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: latoBlack;
+  src:url(../fonts/Lato-Black.ttf);
+}
+@font-face {
+  font-family: chalk;
+  src:url(../fonts/cf-blackboard-font/CfBlackboardPersonalRegular-AKPg.ttf);
+}
+.con1 img{
+    margin-top: 30px;
+    width: 100%;
+}
+.con1 .log-title{
+    margin-top: 100px;
+    font-family: latobold;
+    font-size: 50px;
+}
+.con1 .log-title-text{
+    font-family: lato;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.con1 .inputbox{
+    position: relative;
+    width: 80%;
+}
+.con1 .inputbox input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background: #ffffff;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.2s;
+}
+.con1 .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+.con1 .inputbox input:valid ~ span,
+.con1 .inputbox input:focus ~ span{
+    color: #000000;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #ffffff;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    letter-spacing: 0.2em;
+}
+.con1 .inputbox input:valid,
+.con1 .inputbox input:focus{
+    border: 1px solid #000000;
+}
+.con1 .sign-input{
+    margin-top: 50px;
+}
+.con1 .form-check label{
+    font-family: lato;
+    font-size: 15px;
+}
+.con1 form{
+    width: 450px;
+}
+.con1 .forgot-pass{
+    font-family: lato;
+    font-size: 15px;
+    color: #000000;
+}
+.con1 .btnnn{
+    margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: latobold;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding-top:10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+#error{
+    height: 10px;
+}

@@ -1,0 +1,474 @@
+@font-face {
+    font-family: gundam;
+    src:url(font/Serpentine/Serpentine.otf);
+}
+@font-face {
+  font-family: proxregular;
+  src:url(../font/Demo_Fonts/Fontspring-DEMO-proximanova-regular.otf);
+}@font-face {
+  font-family: proxmedium;
+  src:url(../font/Demo_Fonts/Fontspring-DEMO-proximanova-medium.otf);
+}@font-face {
+  font-family: proxlight;
+  src:url(../font/Demo_Fonts/Fontspring-DEMO-proximanova-light.otf);
+}@font-face {
+  font-family: proxsemi;
+  src:url(../font/Demo_Fonts/Fontspring-DEMO-proximanova-semibold.otf);
+}@font-face {
+  font-family: proxbold;
+  src:url(../font/Demo_Fonts/Fontspring-DEMO-proximanova-bold.otf);
+}@font-face {
+  font-family: proxblack;
+  src:url(../font/Demo_Fonts/Fontspring-DEMO-proximanova-black.otf);
+}
+
+
+html{
+  @apply transition-colors duration-1500 ease-in-out;
+}
+#mode{
+  font-family: proxregular;
+}
+
+ul li a{
+  font-family: proxmedium;
+}
+.navbtn{
+  font-family: proxbold;
+}
+.dartitle h1{
+  font-family: proxbold;
+}
+.dartitle h2{
+  font-family: proxmedium;
+}
+.dartitle button{
+  font-family: proxbold;
+}
+
+.wavinghand {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.wavinghand:hover {
+  animation: wave 0.5s infinite;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(0deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-25deg); }
+  100% { transform: rotate(0deg); }
+}
+.svgnxt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+@keyframes rotate {
+  0% {
+           transform: rotate(0deg);
+       }
+       100% {
+           transform: rotate(360deg);
+       }
+   }
+   
+  .out-bottom {
+       animation: rotate 25s linear infinite;
+       transform-origin: 84px 93px;
+   }
+   .in-bottom {
+       animation: rotate 15s linear infinite;
+       transform-origin: 84px 93px;
+   }
+
+a {
+  text-decoration: none;
+  color: black;
+  margin-left: 1em;
+}
+a:hover {
+  text-decoration: underline;
+}
+a img.icon {
+  display: inline-block;
+  height: 1em;
+  margin: 0 0 -0.1em 0.3em;
+}
+.animated-underline {
+  transform: translateY(7px);
+  position: relative;
+  display: inline-block;
+  color: #7266C9;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #7266C9;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.animated-underline.animate::after {
+  transform: scaleX(1);
+}
+.quotes h1{
+  font-family: proxbold;
+}
+.quotes .author{
+  font-family: proxregular;
+}
+.logotxt{
+  font-family:proxbold;
+  
+}
+.abouttxt{
+  font-family: proxbold;
+}
+.abouttxt h1 span{
+  font-family: sans-serif;
+}
+.abouttxt h2{
+  font-family: proxmedium;
+}
+.abouttxt p{
+  font-family: proxmedium;
+}
+.vl {
+  border-left: 4px solid #28357C;
+  height: 200px;
+}
+@keyframes move {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-20deg); }
+  50% { transform: rotate(25deg); }
+  75% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+h1 .qmark:last-child {
+  font-family: proxbold;
+  display: inline-block;
+  animation: move 1s ease-in-out infinite;
+}
+.skills h3{
+  font-family: proxmedium;
+  margin-top: 20px;
+}
+.bend span{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.progskills{
+  font-family: proxbold;
+}
+.progskills span{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.latesttitle {
+  font-family: proxbold;
+}
+
+.wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+}
+.latestt{
+  position: absolute;
+  
+  font-family: proxbold;
+  
+}
+svg {
+
+  .mask {
+      width: 0;
+  }
+}
+
+.container {
+  display: flex;
+  width: 300vw;
+
+  .col {
+      
+      gap: 20em;
+      
+  }
+
+  section {
+      width: 100vw;
+
+  }
+}
+.testimonialtit h1{
+  font-family: proxbold;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+.testi h1{
+  font-family: proxbold;
+}
+.testi p{
+  font-family: proxmedium;
+}
+.marginworks{
+  background-color: black;
+}
+.fingerslide {
+  position: absolute;
+
+  animation: slide 3s ease-in-out infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% { transform: rotate(20deg);
+  }
+  60% { transform: rotate(-20deg);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.footer .gridtit{
+  font-family: proxmedium;
+}
+.follow{
+  font-family: proxbold;
+}
+.follow1{
+  font-family: proxbold;
+}
+.follow1 h1{
+  font-family: proxmedium;
+}
+.tags{
+  font-family: proxbold;
+}
+.tagsitem{
+  font-family: ;
+}
+.servtit{
+  font-family: proxbold;
+}
+.servtxt{
+  font-family: proxmedium;
+}
+nav .item1 a{
+  font-family: proxmedium;
+}
+nav .item2 h1{
+  font-family: proxmedium;
+}
+.logo h1{
+  font-family: proxbold;
+}
+.svgbg {
+ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.mouse {
+	width: 25px;
+	height: 40px;
+	border-radius: 60px;
+	position: relative;
+	&::before {
+		content: '';
+		width: 5px;
+		height: 5px;
+		position: absolute;
+		top: 5px;
+		left: 50%;
+		transform: translateX(-3px);
+		border-radius: 50%;
+		animation: wheel 2s infinite;
+		-webkit-animation: wheel 2s infinite;
+	}
+}
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 25px;
+	}
+}
+
+@-webkit-keyframes wheel {
+	to {
+		opacity: 0;
+		top: 25px;
+	}
+}
+@keyframes rotate {
+  0% {
+           transform: rotate(0deg);
+       }
+       100% {
+           transform: rotate(360deg);
+       }
+   }
+   .out-top {
+       animation: rotate 20s linear infinite;
+       transform-origin: 13px 25px;
+   }
+   .in-top {
+       animation: rotate 10s linear infinite;
+       transform-origin: 13px 25px;
+   }
+   .out-bottom {
+       animation: rotate 25s linear infinite;
+       transform-origin: 84px 93px;
+   }
+   .in-bottom {
+       animation: rotate 15s linear infinite;
+       transform-origin: 84px 93px;
+   }
+   #progress{
+    
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  #progress-value{
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #163180;
+  }
+  .smore{
+    font-family: proxmedium;
+  }
+  .jobexp{
+    font-family: proxbold;
+  }
+  .jobexp1{
+    font-family: proxmedium;
+  }
+  .hobs{
+    font-family: proxbold;
+  }
+  .hobs p {
+    font-family: proxmedium;
+  }
+  .hobby{
+    font-family: proxmedium;
+  }
+  .ptri{
+   font-family: proxbold;
+  }
+  .ojt{
+    font-family: proxbold;
+  }
+  .contms h1{
+    font-family: proxbold;
+  }
+  .contms p{
+    font-family: proxregular;
+  }
+.latestwork{
+  font-family: proxbold ;
+}
+.works h1{
+  font-family: proxbold;
+}
+.works p{
+  font-family: proxmedium;
+}
+.works button{
+  font-family: proxmedium;
+}
+@keyframes appear{
+  from{
+    opacity: 0;
+    scale: 0.4;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+.block{
+  animation: appear 5s linear;
+  animation-timeline:view();
+  animation-range: entry 0% cover 40%;
+}
+.icon-scroll {
+  width: 20px;
+  height: 30px;
+  background: #ccc;
+  border: 2px solid #bbb;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  box-shadow: 3px 3px 5px -5px #000;
+}
+.icon-scroll::before {
+  content: "";
+  width: 4px;
+  height: 10px;
+  background: #eee;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+.icon-scroll::after {
+  content: "";
+  width: 4px;
+  height: 3px;
+  background-color: #bbb;
+  position: absolute;
+  display: block;
+  animation: scroll ease 1s infinite;
+}
+@keyframes scroll {
+  from {
+    top: 5px;
+  }
+  to {
+    top: 18px;
+  }
+  100% {
+    opacity: 0;
+  }
+}

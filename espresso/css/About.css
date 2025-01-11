@@ -1,0 +1,320 @@
+@font-face {
+    font-family: Amita;
+    src:url(../fonts/Amita/Amita-Regular.ttf);
+}
+@font-face {
+    font-family: AmitaBold;
+    src:url(../fonts/Amita/Amita-Bold.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src:url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: latoBold;
+  src:url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: latoBlack;
+  src:url(../fonts/Lato-Black.ttf);
+}
+@font-face {
+  font-family: chalk;
+  src:url(../fonts/cf-blackboard-font/CfBlackboardPersonalRegular-AKPg.ttf);
+}
+html{
+    scroll-behavior: smooth;
+}
+.hidden{
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateY(200px);
+	transition: all 0.7s;
+}
+.show{
+	opacity: 1;
+	filter: blur(0);
+	transform: translateY(0);
+}
+.con1{
+    margin-top: 40px;
+}
+#carouselExampleDark{
+    max-height: 100%;
+}
+#carouselExampleDark img{
+    height: 600px;
+    width: ful;
+}
+.about-title{
+    background: #CA9961;
+    width: 425px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+    transform: translateX(-15px);
+    margin-top: 10px;
+    position: relative;
+    border-top-left-radius: 25px;
+}
+.about-title span{
+    color: #fff;
+    font-family: latoBold;
+    font-size: 40px;
+}
+.about-title:before{
+    content: "";
+    position: absolute;
+    border-left: 7px solid transparent;
+    border-right: 8px solid #976E4E;
+    border-top: 7px solid #976E4E;
+    border-bottom: 7px solid transparent;
+    top: 74px;
+    left: 0px; 
+}
+.about-title:after{
+    content: "";
+    position: absolute;
+    border-left: 37px solid #CA9961;
+    border-right: 37px solid transparent;
+    border-top: 37px solid #CA9961;
+    border-bottom: 37px solid #CA9961;
+    top: 0px;
+}
+.about-text {
+    font-family: lato;
+    font-size: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 10px;
+    width: 100%;
+}
+.about-about{
+    background-color: #ffe9d0;
+    border-radius: 20px;
+   
+}
+.mission,.vision{
+    font-family: latobold;
+    font-size: 35px;
+    margin-top: 34px;
+}
+.about-text p{
+    font-size: 20px;
+}
+.conmap{
+    margin-top: 40px;
+}
+.maps{
+    width: 100%;
+}
+.conprod{
+    margin-top: 100px;
+    margin-bottom: 110px;
+}
+.conprod video{
+     height: 100%;
+     width: 100%;
+}
+.vidiv{
+    height: 500px;
+}
+.prod-title{
+        background: #CA9961;
+        width: 300px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 20px;
+        transform: translateX(-15px);
+        margin-top: 10px;
+        position: relative;
+        border-top-left-radius: 25px;
+}
+.prod-title span{
+    color: #fff;
+    font-family: latoBold;
+    font-size: 40px;
+}
+.prod-title:before{
+    content: "";
+    position: absolute;
+    border-left: 7px solid transparent;
+    border-right: 8px solid #976E4E;
+    border-top: 7px solid #976E4E;
+    border-bottom: 7px solid transparent;
+    top: 74px;
+    left: 0px; 
+}
+.prod-title:after{
+    content: "";
+    position: absolute;
+    border-left: 40px solid #CA9961;
+    border-right: 37px solid transparent;
+    border-top: 37px solid #CA9961;
+    border-bottom: 37px solid #CA9961;
+    top: 0px;
+}
+.prod-text {
+    font-family: lato;
+    font-size: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 10px;
+    width: 100%;
+}
+.about-prod{
+    background-color: #ffe9d0;
+    border-radius: 20px;
+   
+}
+.coftags-title{
+    font-family: latobold;
+    font-size: 65px;
+    margin-top: 35px;
+}
+.coftags-title span{
+    color: #976E4E;
+    
+}
+.coftags{
+    font-family: lato;
+    font-size: 21px;
+    margin-top: 20px;
+}
+.opening{
+    margin-top: 90px;
+    font-family: latobold;
+    font-size: 20px;
+}
+.contus{
+    margin-top: 50px;
+}
+.contus .rout{
+    font-family: lato;
+    font-size: 48px;
+}
+.contle{
+    font-family: latobold;
+}
+.colform{
+    font-family: lato;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.colform .form{
+    margin-top: 20px;
+}
+.colform .form p{
+    font-size: 18px;
+}
+.colform .form button{
+    font-family: latobold;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+.contus .forminp{
+    margin-top: 30px;
+}
+.others{
+    margin-top: 20px;
+}
+.others .cus-care{
+    font-family: lato;
+    font-size: 48px;
+}
+.others .cus-care-text{
+    font-family: lato;
+    font-size: 18px;
+}
+.others .cusnum p{
+    font-family: lato;
+    font-size: 18px;
+}
+.others .others-con{
+    margin-top: 15px;
+    font-family: lato;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.others .fbicon i{
+    border: solid;
+    padding-top:13px;
+    padding-bottom:13px ;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50%;
+}
+.others .fbicon i{
+    border: solid;
+    padding-top:13px;
+    padding-bottom:13px ;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50%;
+}
+.others .instaicon i{
+    border: solid;
+    padding-top:13px;
+    padding-bottom:13px ;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50%;
+}
+.others .instaicon i{
+    border: solid;
+    padding-top:13px;
+    padding-bottom:13px ;
+    padding-left: 17px;
+    padding-right: 17px;
+    border-radius: 50%;
+}
+.others .social-account1{
+    margin-top: 10px;
+}
+.others .instaicon-text{
+    font-family: lato;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+.others .social-account{
+    margin-top: 20px;
+}
+.others .fbicon-text{
+    font-family: lato;
+    padding-left: 15px;
+    padding-top: 5px;
+    
+}
+#progress{
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	height: 70px;
+	width: 70px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+#progress-value{
+	display: block;
+	height: calc(100% - 15px);
+	width: calc(100% - 15px);
+	background-color: #ffffff;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	font-size: 35px;
+	color: #FC6A03;
+}
+#char-count{
+    font-family: lato;
+    font-size: 15px;
+    color: #000089;
+}

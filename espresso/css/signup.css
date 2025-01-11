@@ -1,0 +1,114 @@
+@font-face {
+    font-family: Amita;
+    src:url(../fonts/Amita/Amita-Regular.ttf);
+}
+@font-face {
+    font-family: AmitaBold;
+    src:url(../fonts/Amita/Amita-Bold.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src:url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: latoBold;
+  src:url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: latoBlack;
+  src:url(../fonts/Lato-Black.ttf);
+}
+@font-face {
+  font-family: chalk;
+  src:url(../fonts/cf-blackboard-font/CfBlackboardPersonalRegular-AKPg.ttf);
+}
+.con1{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: lato;
+    display: flex;
+    min-height: 75vh;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 10px;
+    align-items: center;
+}
+.con1 h1{
+    font-family: latobold;
+    font-size: 60px;
+    margin-top: 40px;
+}
+.inputbox{
+    position: relative;
+    width: 350px;
+}
+.inputbox input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background: #ffffff;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.2s;
+}
+.inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span{
+    color: #000000;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #ffffff;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    letter-spacing: 0.2em;
+}
+.inputbox input:valid,
+.inputbox input:focus{
+    border: 1px solid #000000;
+}
+.error-text{
+    font-family: lato;
+    color: #ffffff;
+    margin-top: 5px;
+    width: 280px;
+    text-align: center; 
+}
+#btnsub{
+    font-family: lato;
+    font-size: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    border-radius: 10px;
+}
+.form-check p{
+    font-family: lato;
+    color: #6a6a6a;
+    font-size: 15px;
+}
+.passval{
+    font-family: lato;
+    color: #6a6a6a;
+    font-size: 13px;
+}
+.exnum{
+    font-family: lato;
+    color: #6a6a6a;
+    font-size: 13px;
+}
+.messagematch{
+    height: 1px;
+}

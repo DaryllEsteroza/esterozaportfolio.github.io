@@ -1,0 +1,87 @@
+@font-face {
+    font-family: Amita;
+    src:url(../fonts/Amita/Amita-Regular.ttf);
+}
+@font-face {
+    font-family: AmitaBold;
+    src:url(../fonts/Amita/Amita-Bold.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src:url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: latoBold;
+  src:url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: latoBlack;
+  src:url(../fonts/Lato-Black.ttf);
+}
+@font-face {
+  font-family: chalk;
+  src:url(../fonts/cf-blackboard-font/CfBlackboardPersonalRegular-AKPg.ttf);
+}
+.conprod{
+    margin-top: 100px;
+}
+.conprod h1{
+    font-family: latobold;
+}
+body{
+    font-family: lato;
+}
+.btnadd{
+    font-family: latobold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    border-radius: 2px;
+    border: none;
+}
+.btn-warning{
+    font-family: latobold;
+    font-size: 20px;
+    color: #ffffff;
+    transition: 0.3s;
+    padding: 7px 10px;
+    text-decoration: none;
+    border: solid 1px #000000;
+    border-radius: 5px;
+}
+.btn-warning i{
+    padding-right: 10px;
+}
+.conprod td button i{
+    padding-right: 6px;
+}
+.conprod td button{
+    padding:5px 10px;
+    font-family: latobold;
+}
+.modal-title{
+    font-family: latobold;
+}
+#deletemodal p{
+    font-family: lato;
+    font-size: 20px;
+}
+.cat{
+    font-family: latobold;
+    padding-left: 10px;
+    color: #9c9b9b;
+}
+.catt{
+    font-family: lato;
+    padding:5px 5px;
+}
+#fileToUpload{
+    width: 45%;
+}
+table tr td button{
+    border-radius: 5px;
+}
+table tr td .deletebtn{
+    margin-top: 5px;
+}
