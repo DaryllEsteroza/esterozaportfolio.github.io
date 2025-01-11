@@ -29,7 +29,7 @@
       <h1 class="de text-lg md:text-xl lg:text-xl xl:text-xl text-[#3D4782] dark:text-white">DARYLL ESTEROZA</h1>
     </div>
     <div class="absolute right-0 mr-10 md:mr-20 lg:mr-36 xl:mr-36 top-1/2 transform -translate-y-1/2">
-      <a href="landingpage.php"><i class="fa-solid fa-x text-xl text-[#3D4782] dark:text-white font-extrabold"></i></a>
+      <a href="index.php"><i class="fa-solid fa-x text-xl text-[#3D4782] dark:text-white font-extrabold"></i></a>
       
     </div>
   </div>
